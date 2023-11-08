@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import TanstackProvider from "@/components/providers/tanstackProvider";
+import TanstackProvider from "@/components/providers/TanstackProvider";
 
 import type { Metadata } from "next";
 import { Inter, Itim, Roboto, Amatic_SC, Comfortaa } from "next/font/google";
