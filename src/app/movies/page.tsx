@@ -20,8 +20,6 @@ const Movies = () => {
 
   const { data, isLoading, isError } = fetchAllMovies(page);
 
-  console.log(isLoading);
-
   useEffect(() => {}, [isLoading]);
 
   let pageOnSearch = 0;

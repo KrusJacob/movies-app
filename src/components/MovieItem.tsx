@@ -12,7 +12,7 @@ const MovieItem = ({ movie }: { movie: IMovie }) => {
       onMouseLeave={() => setOnHover(false)}
       className="border bg-black relative flex items-center overflow-hidden"
     >
-      <div className=" md:w-[350px]">
+      <div className="md:w-[350px] min-h-[520px]">
         <img src={movie.posterUrlPreview} alt={movie.nameOriginal} />
       </div>
       {onHover && (
