@@ -1,7 +1,8 @@
+import Loader from "@/components/UI/Loader/Loader";
 import React from "react";
 
-const Loader = () => {
-  return <p className="text-center text-4xl mt-10">Загрузка...</p>;
+const LoaderPage = () => {
+  return <Loader />;
 };
 
-export default Loader;
+export default LoaderPage;

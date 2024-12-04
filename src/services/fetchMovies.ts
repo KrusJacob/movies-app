@@ -1,46 +1,23 @@
-import axios from "axios";
+import { IDataTrailer, IMovieByKeywordData, IMovieData } from "@/types/movie";
+import { IMovieById } from "@/types/movieSingle";
+import { axiosApi } from "./api/axiosApi";
 
-const API = process.env.API_MOVIES;
 const URL = "https://kinopoiskapiunofficial.tech/api/v2.2/films/";
+const URL_1 = "https://kinopoiskapiunofficial.tech/api/v2.1/films/";
 const type = "TOP_POPULAR_MOVIES";
 
-export const fetchMovies = (page = 1) => {
-  const res = axios
-    .get(`${URL}collections?type=${type}&page=${page}`, {
-      headers: {
-        "X-API-KEY": "17bf5436-5834-4929-9063-26c3a7074ea0",
-        "Content-Type": "application/json",
-      },
-    })
-    .then((res) => res.data);
-
-  return res;
+export const fetchMovies = (page = "1"): Promise<IMovieData> => {
+  return axiosApi(`${URL}collections`, { type, page });
 };
 
-export const fetchMoviesById = (id: string) => {
-  const res = axios
-    .get(`${URL}${id}`, {
-      headers: {
-        "X-API-KEY": "17bf5436-5834-4929-9063-26c3a7074ea0",
-        "Content-Type": "application/json",
-      },
-    })
-    .then((res) => res.data);
-
-  return res;
+export const fetchMoviesById = (id: string): Promise<IMovieById> => {
+  return axiosApi(`${URL}${id}`);
 };
 
-export const fetchTrailerById = (id: string) => {
-  const res = axios
-    .get(`${URL}${id}/videos`, {
-      headers: {
-        "X-API-KEY": "17bf5436-5834-4929-9063-26c3a7074ea0",
-        "Content-Type": "application/json",
-      },
-    })
-    .then((res) => res.data);
-
-  return res;
+export const fetchTrailerById = (id: string): Promise<IDataTrailer> => {
+  return axiosApi(`${URL}${id}/videos`);
 };
 
-// ("https://kinopoiskapiunofficial.tech/api/v2.2/films/535341/videos");
+export const fetchMoviesByKeyword = (keyword: string, page = "1"): Promise<IMovieByKeywordData> => {
+  return axiosApi(`${URL_1}search-by-keyword`, { keyword, page });
+};
