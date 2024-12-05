@@ -1,4 +1,4 @@
-export interface IMovieSingle {
+export interface IMovieById {
   kinopoiskId: number;
   kinopoiskHDId: string;
   imdbId: string;

@@ -14,7 +14,7 @@ const Navigation = ({ navLinks }: NavigationProps) => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-6 md:gap-20 text-2xl md:text-3xl justify-center">
+    <nav className="flex gap-4 md:gap-20 text-xl md:text-3xl justify-center">
       {navLinks.map((link) => {
         const isActive = pathname === link.src;
         return (
