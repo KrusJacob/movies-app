@@ -26,7 +26,7 @@ const MoviesItemInfo = ({ movie }: { movie: IUnifiedMovie }) => {
         ))}
       </ul>
 
-      <p className="text-base md:text-2xl">{movie.year} год</p>
+      <p className="text-base md:text-2xl">{movie.year ? movie.year : new Date().getFullYear()} год</p>
     </div>
   );
 };
