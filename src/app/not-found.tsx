@@ -1,8 +1,8 @@
-import NotFoundPage from "@/components/pages/NotFoundPage";
+import NotFoundPage from "@/_pages/NotFoundPage";
 import React from "react";
 
-const page = () => {
+const NotFound = () => {
   return <NotFoundPage />;
 };
 
-export default page;
+export default NotFound;

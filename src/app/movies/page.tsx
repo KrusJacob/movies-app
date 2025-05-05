@@ -1,8 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 
-import MoviesPage from "@/components/pages/MoviesPage";
-import Search from "@/components/entities/search/Search";
+import MoviesPage from "@/_pages/MoviesPage";
+import { MovieSearch } from "@/features/movieSearch";
 
 export const metadata: Metadata = {
   title: "Фильмы | ФильмФан",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Movies = () => {
   return (
     <div className="max-w-[1500px] m-auto py-4 px-2 flex flex-col gap-6 justify-center">
-      <Search />
+      <MovieSearch />
       <MoviesPage />
     </div>
   );
