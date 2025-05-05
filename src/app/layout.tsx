@@ -1,9 +1,9 @@
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import TanstackProvider from "@/components/providers/TanstackProvider";
+import Footer from "@/shared/ui/Footer/Footer";
+import Header from "@/shared/ui/Header/Header";
+import TanstackProvider from "@/shared/providers/TanstackProvider";
 
 import type { Metadata } from "next";
-import { Inter, Itim, Roboto, Amatic_SC, Comfortaa } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import "./globals.css";
 
 const inter = Comfortaa({ subsets: ["latin"], weight: ["400", "700"] });

@@ -1,4 +1,4 @@
-import NewsPage from "@/components/pages/NewsPage";
+import NewsPage from "@/_pages/NewsPage";
 import { Metadata } from "next";
 import React from "react";
 
