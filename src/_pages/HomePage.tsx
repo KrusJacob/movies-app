@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import MovieBanner from "../features/movieBanner/ui/MovieBanner/MovieBanner";
 import Loader from "../shared/ui/Loader/Loader";
 import { getAllMovies } from "@/widgets/movie";
+import { MovieBanner } from "@/features/movieBanner";
 
 const HomePage = () => {
   const { data, isPending } = getAllMovies("1");
