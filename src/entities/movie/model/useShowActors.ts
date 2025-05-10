@@ -1,6 +1,6 @@
 import { IStaff } from "./types";
 
-const useShowActors = (staff: IStaff[], limit = 5) => {
+export const useShowActors = (staff: IStaff[], limit = 5) => {
   const actors =
     staff
       .filter((item) => item.professionKey === "ACTOR")
@@ -10,5 +10,3 @@ const useShowActors = (staff: IStaff[], limit = 5) => {
 
   return actors;
 };
-
-export default useShowActors;

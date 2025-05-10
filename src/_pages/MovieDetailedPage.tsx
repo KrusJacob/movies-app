@@ -8,6 +8,7 @@ import { IMovieDetailed } from "@/entities/movie";
 
 const MovieDetailedPage = ({ movie }: { movie: IMovieDetailed }) => {
   const router = useRouter();
+
   return (
     <div className="max-w-[1500px]  m-auto  py-4 px-3">
       <Button onClick={() => router.back()}> ← Назад</Button>
