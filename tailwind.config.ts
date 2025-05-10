@@ -24,7 +24,7 @@ const config: Config = {
 
       animation: {
         show: "show .5s ease-out",
-        opacity: "opacity .25s ease-out",
+        opacity: "opacity .3s ease-out",
       },
     },
   },

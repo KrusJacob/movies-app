@@ -2,9 +2,9 @@ import { fetchMovieStaff, fetchMovies, fetchMoviesByKeyword } from "@/entities/m
 import { moviesFromDto } from "@/entities/movie";
 import { useQuery } from "@tanstack/react-query";
 
-export const getAllMovies = (page: string | undefined, str = "") => {
-  if (str) {
-    const { data, isError, isPending } = getAllMoviesByKeyword(str, page);
+export const getAllMovies = (page: string | undefined, search = "") => {
+  if (search) {
+    const { data, isError, isPending } = getAllMoviesByKeyword(search, page);
     return { data, isPending, isError };
   }
   const { data, isPending, isError } = getMovies(page);
