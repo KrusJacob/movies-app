@@ -1,34 +1,22 @@
 "use client";
-import { IMovieDetailed, MovieDetailsInfo, MovieMediaPlayer } from "@/entities/movie";
-import React, { useState } from "react";
+import { IMovieDetailed, MovieDetailsInfo } from "@/entities/movie";
+import React from "react";
 import { getMovieStaff } from "../../";
 import { getAllMovieFacts } from "@/features/movieFact/api";
-import { MovieFactList } from "@/features/movieFact";
+import MovieFacts from "@/widgets/fact/ui/MovieFacts/MovieFacts";
+import MovieDetailsBody from "./MovieDetailsBody";
 
 export const MovieDetails = ({ movie }: { movie: IMovieDetailed }) => {
-  const [isShowFacts, setIsShowFacts] = useState(false);
   const { data: movieStaff, isPending: isStaff } = getMovieStaff(`${movie.kinopoiskId}`);
-  const { data: movieFacts, isPending: isFacts } = getAllMovieFacts(`${movie.kinopoiskId}`, isShowFacts);
+  const { data: movieFacts, isPending: isFacts } = getAllMovieFacts(`${movie.kinopoiskId}`);
 
   return (
-    <div className="flex flex-col  lg:flex-row gap-6 mx-auto  mt-8">
-      <MovieDetailsInfo movie={movie} movieStaff={movieStaff} isPendingSfaff={isStaff} />
-      <div className="flex flex-col gap-4">
-        <MovieMediaPlayer id={`${movie.kinopoiskId}`} />
-        <div>
-          <h5 className="text-lg md:text-xl text-center">Описание фильма:</h5>
-          <p className="text-sm md:text-lg mt-4"> {movie.description}</p>
-        </div>
-        <div className="mt-12 flex flex-col justify-center">
-          <button
-            className="text-[var(--blueColor)] text-lg md:text-xl w-max m-auto"
-            onClick={() => setIsShowFacts(!isShowFacts)}
-          >
-            {isShowFacts ? "Скрыть" : "Показать"} интересные факты о фильме
-          </button>
-          {isShowFacts && <MovieFactList facts={movieFacts} isPending={isFacts} />}
-        </div>
+    <div className="mt-8">
+      <div className="flex flex-col md:flex-row  gap-8  ">
+        <MovieDetailsInfo movie={movie} />
+        <MovieDetailsBody movie={movie} movieStaff={movieStaff} isPendingSfaff={isStaff} />
       </div>
+      <MovieFacts facts={movieFacts} isFacts={isFacts} />
     </div>
   );
 };

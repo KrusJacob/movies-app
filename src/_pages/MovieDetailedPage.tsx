@@ -10,7 +10,7 @@ const MovieDetailedPage = ({ movie }: { movie: IMovieDetailed }) => {
   const router = useRouter();
 
   return (
-    <div className="max-w-[1500px]  m-auto  py-4 px-3">
+    <div className={`max-w-[1500px]  m-auto  py-4 pb-12 px-3`}>
       <Button onClick={() => router.back()}> ← Назад</Button>
 
       <MovieDetails movie={movie} />
