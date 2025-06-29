@@ -12,7 +12,7 @@ const Button: FC<ButtonProps> = ({ children, onClick, disabled }) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className="self-center bg-[var(--blueColor)]  text-[var(--darkblue)] text-lg xl:text-2xl border rounded-2xl h-min py-1.5 px-3 hover:bg-[var(--darkblue)] hover:text-[var(--blueColor)] transition-all duration-300 disabled:opacity-30 cursor-pointer"
+      className="self-center bg-[var(--darkblue)] text-[var(--whiteColor)]  text-lg xl:text-2xl border rounded-2xl h-min py-1.5 px-3 hover:bg-[var(--blueColor)] hover:text-[var(--darkblue)]  transition-all duration-300 disabled:opacity-30 cursor-pointer"
     >
       {children}
     </button>

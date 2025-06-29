@@ -28,8 +28,9 @@ body {
   font-weight: 700;
   min-height: 100%;
   color: var(--whiteColor);
-  background: rgb(27, 27, 29);
+  background: var(--darkblue);
   background: linear-gradient(180deg, var(--darkblue) 10%, var(--darkViolet) 40%, var(--darkblue) 95%);
+
   display: flex;
   flex-direction: column;
 }
@@ -38,23 +39,16 @@ main {
   flex: 1 1 auto;
 }
 
-a {
+.link {
   transition: 0.4s all;
 }
-a.active {
+.link.active {
   color: var(--blueColor);
   text-shadow: 0 20px 20px var(--blueColor);
 }
-nav a:hover {
+nav .link:hover {
   color: var(--blueColor);
   transform: translateY(4px);
-}
-
-tr {
-  @apply align-top text-base md:text-lg;
-}
-td {
-  @apply p-1;
 }
 
 @layer components {

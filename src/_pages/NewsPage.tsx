@@ -12,6 +12,8 @@ const NewsPage = () => {
   const searchParams = useSearchParams();
   const page = searchParams?.get("page") || "1";
 
+  console.log(data);
+
   const { reversedData, isPending, isError } = useReverseNews(page, data?.totalPages || parseInt(page));
 
   if (isError) {
@@ -19,13 +21,13 @@ const NewsPage = () => {
   }
 
   return (
-    <div className="max-w-[1080px] m-auto px-4 mt-6 flex flex-col gap-6">
+    <div className="max-w-[1080px] m-auto py-4 pb-12 px-3 flex flex-col gap-6">
       {isPending ? (
         <Loader />
       ) : (
         <>
           <Pagination totalPages={data?.totalPages} currentPage={parseInt(page)} />
-          {reversedData.news && <NewsList news={reversedData.news} />}
+          {reversedData?.news && <NewsList news={reversedData.news} />}
           <Pagination totalPages={data?.totalPages} currentPage={parseInt(page)} />
         </>
       )}
