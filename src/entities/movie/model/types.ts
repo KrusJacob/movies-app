@@ -134,3 +134,5 @@ export interface IMovieDetailed {
   shortFilm: boolean;
   completed: boolean;
 }
+
+export type IPoster = { img: string };

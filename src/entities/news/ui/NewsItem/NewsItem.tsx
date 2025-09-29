@@ -10,7 +10,7 @@ export const NewsItem = ({ news }: { news: IMediaNews }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex flex-col md:flex-row gap-2 border-y border-gray-500 md:max-h-[150px] overflow-y-hidden animate-opacity">
+    <div className="flex flex-col md:flex-row gap-2 bg-[var(--black75)] border-y border-gray-500 md:max-h-[150px] overflow-y-hidden animate-opacity">
       <div>
         <Link className="block md:w-[260px]" target="_blank" href={news.url}>
           {isLoading && <Skeleton width={260} height={146} />}

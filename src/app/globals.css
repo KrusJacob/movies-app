@@ -10,6 +10,7 @@
   --darkViolet: rgb(58, 40, 63);
   --blueColor: rgb(0, 255, 255);
   --whiteColor: rgb(230, 230, 230);
+  --black75: rgba(0, 0, 0, 0.75);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,8 +29,9 @@ body {
   font-weight: 700;
   min-height: 100%;
   color: var(--whiteColor);
-  background: var(--darkblue);
-  background: linear-gradient(180deg, var(--darkblue) 10%, var(--darkViolet) 40%, var(--darkblue) 95%);
+  background: rgb(20, 14, 26);
+  /* background: var(--darkblue); */
+  /* background: linear-gradient(180deg, var(--darkblue) 10%, var(--darkViolet) 40%, var(--darkblue) 95%); */
 
   display: flex;
   flex-direction: column;
