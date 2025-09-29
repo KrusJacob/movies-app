@@ -5,6 +5,8 @@ import TanstackProvider from "@/shared/providers/TanstackProvider";
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
+import { Canvas } from "@react-three/fiber";
+import { ThreeBackground } from "@/shared/ui/ThreeBackground/ThreeBackground";
 
 const inter = Comfortaa({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main>{children}</main>
           <Footer />
+          <ThreeBackground />
         </TanstackProvider>
       </body>
     </html>

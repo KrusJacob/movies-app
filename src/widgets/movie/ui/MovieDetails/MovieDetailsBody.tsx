@@ -13,12 +13,14 @@ const MovieDetailsBody = ({ movie, movieStaff, isPendingSfaff }: Props) => {
   return (
     <div className="flex  flex-col gap-y-12 h-min min-w-0">
       <h2 className="text-4xl md:text-5xl text-center md:text-start">{movie.nameRu}</h2>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 ">
         {movie.genres?.map((genre) => (
           <Chip text={genre.genre} key={genre.genre} />
         ))}
       </div>
-      <div>{movie.description ? movie.description : "Описание отсутствует"}</div>
+      <div className="bg-[var(--black75)] p-4 rounded-xl">
+        {movie.description ? movie.description : "Описание отсутствует"}
+      </div>
       <div>
         <h5 className="text-xl md:text-2xl mb-2">В ролях:</h5>
         {isPendingSfaff && <Loader />}

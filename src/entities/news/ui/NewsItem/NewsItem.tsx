@@ -10,7 +10,7 @@ export const NewsItem = ({ news }: { news: IMediaNews }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex flex-col md:flex-row gap-2 border-y border-gray-500 md:max-h-[150px] overflow-y-hidden animate-opacity">
+    <div className="flex flex-col md:flex-row gap-2 bg-[var(--black75)] border-y border-gray-500 md:max-h-[150px] overflow-y-hidden animate-opacity">
       <div>
         <Link className="block md:w-[260px]" target="_blank" href={news.url}>
           {isLoading && <Skeleton width={260} height={146} />}
@@ -24,7 +24,7 @@ export const NewsItem = ({ news }: { news: IMediaNews }) => {
           />
         </Link>
       </div>
-      <div className="flex flex-col gap-2 overflow-hidden py-1 w-full">
+      <div className="flex flex-col gap-2 overflow-hidden py-1 px-2 md:px-0 w-full">
         <Link href={news.url} target="_blank" className="text-base md:text-lg hover:text-[var(--blueColor)]">
           {news.title}
         </Link>
