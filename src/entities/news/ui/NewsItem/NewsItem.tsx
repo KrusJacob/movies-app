@@ -24,7 +24,7 @@ export const NewsItem = ({ news }: { news: IMediaNews }) => {
           />
         </Link>
       </div>
-      <div className="flex flex-col gap-2 overflow-hidden py-1 w-full">
+      <div className="flex flex-col gap-2 overflow-hidden py-1 px-2 md:px-0 w-full">
         <Link href={news.url} target="_blank" className="text-base md:text-lg hover:text-[var(--blueColor)]">
           {news.title}
         </Link>
