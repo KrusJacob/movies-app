@@ -1,6 +1,6 @@
 ## ФильмФан - https://movies-app-iota-lac.vercel.app/
 
-# Технологии: Next.js, TypeScript, Tailwind CSS
+# Технологии: Next.js, TypeScript, Tailwind CSS, Three.js
 
 # Функционал:
  * Запросы к API: tanstack-query для получения фильмов и медиа-новостей и сохранение их в кэше.
@@ -8,6 +8,7 @@
  * Улучшил пользовательский опыт за счёт быстрой и плавной работы интерфейса (skeleton loading и lazy-loading)
  * Работа с видео: Использование react-player
  * Переписал приложение под FSD архитектуру
+ * 3D background, написанный на Three.js (React Three Fiber)
 
 ## Getting Started
 
