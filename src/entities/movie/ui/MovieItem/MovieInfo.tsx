@@ -12,7 +12,7 @@ export const MovieInfo = ({ movie }: { movie: IMovieDto }) => {
         ))}
       </ul>
       <Link
-        href={`/movies/${movie.id}`}
+        href={`/movies/${movie.kinopoiskId}`}
         className="bg-[var(--darkblue)] text-[var(--blueColor)]  text-lg md:text-2xl border rounded-3xl h-min py-1 hover:bg-[var(--blueColor)] hover:text-[var(--darkblue)] transition-all duration-300"
       >
         Смотреть

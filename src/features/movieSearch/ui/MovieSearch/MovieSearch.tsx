@@ -7,12 +7,12 @@ const MovieSearch = () => {
   const { search, searchHandler, changeInputHandler, keyDownHandler } = useSearch();
 
   return (
-    <div className="w-full flex justify-center gap-1 my-3">
+    <div className="flex justify-center gap-1">
       <input
         value={search}
         onChange={changeInputHandler}
         onKeyDown={keyDownHandler}
-        className="max-w-[400px] w-full text-xl py-2 px-2 rounded text-black "
+        className="max-w-[400px] text-base md:text-xl py-2 px-2 rounded text-black md:min-w-[300px]"
         type="search"
         placeholder="Поиск фильма"
       />

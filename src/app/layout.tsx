@@ -1,7 +1,6 @@
 import Footer from "@/shared/ui/Footer/Footer";
 import Header from "@/shared/ui/Header/Header";
 import TanstackProvider from "@/shared/providers/TanstackProvider";
-
 import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
