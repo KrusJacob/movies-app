@@ -18,7 +18,7 @@ export interface IMovie {
   countries: Country[];
   genres: Genre[];
   ratingKinopoisk: number;
-  ratingImbd: number;
+  // ratingImbd: number;
   year: string;
   type: string;
   posterUrl: string;
@@ -32,22 +32,22 @@ interface Genre {
 }
 
 export interface IMovieDto {
-  id: number;
+  kinopoiskId: number;
   nameRu: string;
   nameEn: string;
   nameOriginal?: string;
   countries: Country[];
   genres: Genre[];
   ratingKinopoisk?: number;
-  ratingImbd?: number;
-  year: string;
+  // ratingImbd?: number;
+  year: string | number;
   type: string;
   posterUrl: string;
   posterUrlPreview: string;
   description?: string;
-  filmLength?: string;
+  // filmLength?: string;
   rating?: string;
-  ratingVoteCount?: number;
+  // ratingVoteCount?: number;
 }
 
 export interface IMovieByKeyword {
@@ -57,11 +57,11 @@ export interface IMovieByKeyword {
   type: string;
   year: string;
   description: string;
-  filmLength: string;
+  // filmLength: string;
   countries: Country[];
   genres: Genre[];
   rating: string;
-  ratingVoteCount: number;
+  // ratingVoteCount: number;
   posterUrl: string;
   posterUrlPreview: string;
 }
@@ -113,7 +113,7 @@ export interface IMovieDetailed {
   ratingRfCriticsVoteCount: number;
   webUrl: string;
   year: number;
-  filmLength: number;
+  // filmLength: number;
   slogan: string;
   description: string;
   shortDescription: string;

@@ -1,5 +1,5 @@
 import { fetchMovieStaff, fetchMovies, fetchMoviesByKeyword } from "@/entities/movie/api";
-import { moviesFromDto } from "@/entities/movie";
+import { convertMovieFromDto } from "@/entities/movie";
 import { useQuery } from "@tanstack/react-query";
 
 export const getAllMovies = (page: string | undefined, search = "") => {
@@ -16,7 +16,7 @@ const getMovies = (page: string | undefined) => {
     queryKey: ["movies", page],
     queryFn: () => fetchMovies(page),
     select: (data) => ({
-      movies: data.items.map(moviesFromDto),
+      movies: data.items.map(convertMovieFromDto),
       totalPages: data.totalPages,
     }),
   });
@@ -29,7 +29,7 @@ const getAllMoviesByKeyword = (str: string, page: string | undefined) => {
     queryKey: ["moviesByKeyword", str, page],
     queryFn: () => fetchMoviesByKeyword(str, page),
     select: (data) => ({
-      movies: data.films.map(moviesFromDto),
+      movies: data.films.map(convertMovieFromDto),
       totalPages: data.pagesCount,
     }),
   });

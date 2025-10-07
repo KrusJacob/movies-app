@@ -20,7 +20,7 @@ const MoviesPage = () => {
       {isPending ? (
         <Loader />
       ) : (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col">
           <Pagination totalPages={data?.totalPages} currentPage={parseInt(page)} />
           {data?.movies && <MoviesList movies={data.movies} />}
           <Pagination totalPages={data?.totalPages} currentPage={parseInt(page)} />

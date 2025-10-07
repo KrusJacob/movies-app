@@ -34,7 +34,7 @@ const MovieBanner = ({ movies }: { movies?: IMovieDto[] }) => {
       >
         {movies.map((movie: IMovieDto) => {
           return (
-            <SwiperSlide key={movie.id}>
+            <SwiperSlide key={movie.kinopoiskId}>
               <MovieBannerCard movie={movie} />
             </SwiperSlide>
           );

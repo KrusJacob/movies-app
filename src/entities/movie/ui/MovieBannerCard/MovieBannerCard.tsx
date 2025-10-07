@@ -6,7 +6,7 @@ import { IMovieDto } from "../..";
 export const MovieBannerCard = ({ movie }: { movie: IMovieDto }) => {
   return (
     <div className="border bg-white relative flex items-center justify-center w-[180px]">
-      <Link href={`/movies/${movie.id}`}>
+      <Link href={`/movies/${movie.kinopoiskId}`}>
         <MovieImage movie={movie} isBanner />
       </Link>
     </div>
