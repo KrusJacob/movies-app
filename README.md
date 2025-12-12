@@ -1,12 +1,14 @@
-## My Weather - https://my-weather-wine.vercel.app/
+## ФильмФан - https://movies-app-iota-lac.vercel.app/
 
-# Технологии: React, TypeScript, Redux Toolkit
+# Технологии: Next.js, TypeScript, Tailwind CSS, Three.js
 
 # Функционал:
- * Реализовал запросы к API: RTK Query с автоматическим сохранением в store (onQueryStarted)
- * Разработал поиск по имени города и оптимизировал запросы
- * Переписал приложение на FSD Архитектуру
- * Обеспечил удобство использования приложения на всех типах устройств и произвел PWA-ификацию.
+ * Запросы к API: tanstack-query для получения фильмов и медиа-новостей и сохранение их в кэше.
+ * Пагинация и поиск: Компонент Pagination и хук для Search, использующий query params для оптимизации запросов.
+ * Улучшил пользовательский опыт за счёт быстрой и плавной работы интерфейса (skeleton loading и lazy-loading)
+ * Работа с видео: Использование react-player
+ * Переписал приложение под FSD архитектуру
+ * 3D background, написанный на Three.js (React Three Fiber)
 
 ## Getting Started
 
@@ -21,4 +23,3 @@ pnpm dev
 # or
 bun dev
 ```
-
