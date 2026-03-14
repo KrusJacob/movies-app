@@ -4,7 +4,7 @@ import { IMovieDto } from "../../model/types";
 
 export const MovieInfo = ({ movie }: { movie: IMovieDto }) => {
   return (
-    <div className="absolute inset-0 bg-black bg-opacity-80 transition-all flex flex-col gap-2 justify-between md:gap-4 p-4 text-center animate-show">
+    <div className="absolute inset-0 bg-black bg-opacity-75 transition-all flex flex-col gap-2 justify-between md:gap-4 p-4 text-center animate-opacity">
       <p className="text-lg md:text-2xl mb-2 ">{movie.nameRu || movie.nameOriginal}</p>
       <ul className="text-sm md:text-xl grid md:grid-cols-2 gap-x-3">
         {movie.genres.map((genre) => (

@@ -11,9 +11,9 @@ export const MovieItem = ({ movie }: { movie: IMovieDto }) => {
     <div
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
-      className="border bg-black relative flex items-center overflow-hidden w-[200px] max-h-[500px] md:w-[350px] animate-opacity "
+      className="border bg-black  relative flex items-center overflow-hidden w-[200px] max-h-[500px] md:w-[350px] animate-opacity "
     >
-      <MovieImage movie={movie} />
+      <MovieImage movie={movie} onHover={onHover} />
       {onHover && <MovieInfo movie={movie} />}
     </div>
   );
