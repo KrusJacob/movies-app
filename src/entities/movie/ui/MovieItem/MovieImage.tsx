@@ -2,13 +2,19 @@ import Skeleton from "@/shared/ui/Skeleton/Skeleton";
 import React, { useState } from "react";
 import { IMovieDto } from "../../model/types";
 
-export const MovieImage = ({ movie, isBanner }: { movie: IMovieDto; isBanner?: boolean }) => {
+interface Props {
+  movie: IMovieDto;
+  isBanner?: boolean;
+  onHover?: boolean;
+}
+
+export const MovieImage = ({ movie, isBanner, onHover }: Props) => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   return (
-    <div className={`w-full ${isBanner ? "h-[270px]" : ""} `}>
+    <div className={`w-full ${isBanner ? "h-[270px]" : ""} overflow-hidden relative `}>
       {!imageLoaded && <Skeleton />}
       <img
-        className="w-full h-full object-cover"
+        className={`${onHover ? "scale-105" : ""} "w-full h-full object-cover duration-300 transition-all"`}
         onLoad={() => setImageLoaded(true)}
         src={movie.posterUrlPreview}
         alt={movie.nameOriginal}
